@@ -1,0 +1,23 @@
+name: CI
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: gableroux/2019.3.5f1-windows
+    steps:
+        - name: Checkout Project
+          uses: actions/checkout@v1
+        
+        # Activate unity
+        - name: Activate Unity
+          run: /opt/Unity/Editor/Unity -quit -batchmode -nographics -silent-crashes -logFile -manualLicenseFile .github/Unity_v2019.x.ulf || exit 0
+        
+        # Build Windows
+        - name: Build Windows Player
+          run: /opt/Unity/Editor/Unity -quit -batchmode -nographics -logFile -projectPath . -buildWindows64Player ./bin-win64/CIBuildTest.exe
+
+        - name: Archive ML Build
+          uses: actions/upload-artifact@v1
+          with:
+            name: TestCI
+            path: ./bin-win64

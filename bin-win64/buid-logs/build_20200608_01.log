@@ -1,0 +1,29 @@
+[LicensingClient] ERROR Failed to connect to local IPC
+[Licensing::Module] Failed to connect to channel: LicenseClient-root
+[Licensing::Module] Successfully launched the LicensingClient
+[Licensing::Module] Successfully connected to LicensingClient on channel: LicenseClient-root
+[SignatureVerifier] Application signature verification not supported on this platform.
+[Licensing::Module] Successfully launched and connected to LicensingClient
+Entitlement-based licensing initiated
+[LicensingClient] Licenses Updated successfully in LicensingClient
+
+LICENSE SYSTEM [202067 23:6:29] Next license update check is after 2020-06-06T05:16:45
+
+[Licensing::Module] Serial number assigned to: "F4-T9T7-F7KN-5YN5-D7KN-XXXX"\n[Package Manager] Server::Start -- Port 56314 was selected
+
+ COMMAND LINE ARGUMENTS:
+/opt/Unity/Editor/Unity
+-quit
+-batchmode
+-nographics
+-logFile
+./buid-logs/build_20200608_01.log
+-projectPath
+.
+-buildWindows64Player
+./bin-win64/CIBuildTest.exe
+Couldn't set project path to: /unity_ci_project_win/bin-win64/. 
+(Filename: ./Runtime/Utilities/Argv.cpp Line: 361)
+
+[Unity Package Manager (Upm)]
+Parent process [965] was terminated
